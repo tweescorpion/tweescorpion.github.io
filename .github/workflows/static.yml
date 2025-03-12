@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St Gerard's Podcast</title>
+    <!-- Adding Google Font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for the page layout and colors */
+        body {
+            font-family: Arial, sans-serif;
+            color: #003366; /* Blue text */
+            margin: 0;
+            padding: 0;
+            background-image: 
+                url('https://as2.ftcdn.net/v2/jpg/04/34/74/65/1000_F_434746570_36fmkTrm6q9S5T74P3bOVn2DlYxle9zY.jpg'), /* Background image */
+                linear-gradient(135deg, rgba(0, 51, 102, 0.5), rgba(0, 51, 102, 0.5)); /* Gradient overlay */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
+            padding-bottom: 20px;
+            background-attachment: fixed; /* Keeps the background in place */
+        }
+
+        /* Blue overlay for the background */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 51, 102, 0.6); /* Semi-transparent blue */
+            z-index: -1; /* Make sure the overlay is behind the content */
+        }
+
+        header {
+            background-color: rgba(255, 204, 0, 0.8); /* Transparent yellow header */
+            color: #003366; /* Blue text */
+            padding: 30px;
+            text-align: center;
+            font-size: 36px; /* Larger font size */
+            font-family: 'Poppins', sans-serif; /* Stylish font */
+            font-weight: 700; /* Bold font weight */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-radius: 12px; /* Rounded corners for the header */
+        }
+        header img {
+            width: 120px; /* Larger square logo width */
+            height: 120px; /* Square logo height */
+            border-radius: 12px; /* Rounded corners for logo */
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for readability */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow-y: auto;
+        }
+        .podcast {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+        .podcast:last-child {
+            border-bottom: none;
+        }
+        audio {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px; /* Set the height of the embedded YouTube video */
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #003366;
+            color: #ffcc00;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #002244;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .logo-container img {
+            width: 120px; /* Larger square size */
+            height: 120px; /* Square height */
+            border-radius: 12px; /* Rounded corners for images */
+        }
+        /* Added Podcast logo styling */
+        .podcast-logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* More abstract, subtle microphone and cables */
+        .microphone {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            width: 200px;
+            opacity: 0.05;
+        }
+        .cable {
+            position: absolute;
+            top: 60%;
+            right: 15%;
+            width: 200px;
+            opacity: 0.05;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Subtle abstract microphone and cable shapes -->
+    <img class="microphone" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Microphone_icon.svg/1024px-Microphone_icon.svg.png" alt="Microphone Icon">
+    <img class="cable" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Audio_jack.svg/1024px-Audio_jack.svg.png" alt="Cable Icon">
+
+    <header>
+        <img src="https://static.vecteezy.com/system/resources/previews/013/710/312/original/simple-podcast-or-radio-logo-design-inspiration-with-mic-and-headphone-for-streaming-podcast-broadcast-radio-channel-business-brand-simple-modern-logo-design-vector.jpg" alt="Podcast Logo" height="120" width="120">
+        St Gerard's School Podcast
+    </header>
+    <div class="container">
+        <h2>Podcast Library</h2>
+        
+        <!-- Each podcast episode is added here -->
+        <div class="podcast">
+            <h3>Episode 1: Welcome to St Gerard's Podcast</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <iframe src="https://www.youtube.com/embed/qiP1E6iAVS8?si=FdYO6AntybfXU10c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="podcast">
+            <h3>Episode 2: School Life & Activities</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <iframe src="https://www.youtube.com/embed/NiKtZgImdlY?si=13zCJiImd90Flvlu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="podcast">
+            <h3>Episode 3: The Future of St Gerard's</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <iframe src="https://www.youtube.com/embed/M-ZH3psUbfU?si=v5YYrYyQlRJ2JS-5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <!-- Button for future episodes -->
+        <div class="btn-container">
+            <button onclick="alert('More episodes coming soon!')">More Episodes</button>
+        </div>
+    </div>
+</body>
+</html>
